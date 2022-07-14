@@ -1,1 +1,233 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.button {
+  background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+  margin-top: 35px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  width: 225px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.button__text {
+  color: white;
+}
+
+.footer {
+  background-color: #353535;
+  color: white;
+  margin: 65px 0 0px 0;
+  padding: 27px 0 40px 0;
+}
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  margin: 0 0 0 25px;
+  font-size: 1.2em;
+}
+.footer__link {
+  margin-left: 25px;
+  margin-top: 13px;
+}
+
+.header {
+  text-align: center;
+  padding: 23px 0 7px 0;
+}
+.header__image {
+  width: 165px;
+}
+
+.pub {
+  background-color: #F6F6F6;
+  padding-bottom: 60px;
+  padding-top: 42px;
+}
+.pub__text {
+  text-align: center;
+}
+.pub__title {
+  margin: 0 50px 20px 45px;
+  font-weight: bolder;
+  font-size: 1.5em;
+}
+.pub__subtitle {
+  margin: 0 20px 0 20px;
+  font-size: 1.1em;
+}
+
+.subheader {
+  background-color: #EAEAEA;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 50px;
+  box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.445);
+}
+.subheader__text {
+  font-weight: bold;
+}
+
+main {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1, h2, h3, p, a, span {
+  font-family: "Roboto", sans-serif;
+}
+
+.container__title h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
+.section--fonctionnement {
+  padding-bottom: 20px;
+}
+.section__title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 50px 0 0 0;
+}
+.section .stage {
+  margin-top: 30px;
+}
+.section .stage__content {
+  margin: 30px 0 0 0;
+  background-color: #F6F6F6;
+  height: 70px;
+  align-items: center;
+  gap: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.section .stage__number {
+  color: white;
+  margin-left: -10px;
+  background-color: #9356DC;
+  border: solid 1px #9356DC;
+  border-radius: 50%;
+  padding: 5px 8px;
+}
+.section .stage__icon {
+  color: grey;
+}
+.section .stage__text {
+  font-weight: bold;
+}
+.section--restaurants {
+  margin-top: 100px;
+}
+.section .restau {
+  flex-direction: column;
+  margin-bottom: 20px;
+  height: 250px;
+  object-fit: cover;
+  margin: 20px 0 0 0;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.section .restau__image img {
+  object-fit: cover;
+  height: 175px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.section .restau__content {
+  margin: 20px 10px 0 10px;
+}
+.section .restau__new {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 5px 10px 5px 10px;
+  border-radius: 3px;
+  border: solid 1px #99E2D0;
+  background-color: #99E2D0;
+  color: #008766;
+  font-weight: bold;
+}
+.section .restau__title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.section .restau__text {
+  margin: 5px 0 0 0;
+  font-size: 1.1em;
+}
+.section .restau__heart {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  font-size: 1.5em;
+}
+
 /*# sourceMappingURL=style.css.map */

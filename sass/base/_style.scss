@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+h1,h2,h3,p,a,span {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container__title h1{
+    font-family: 'Shrikhand', cursive;
+}
+
+a{
+    outline: none;
+    text-decoration: none;
+    &:visited{
+        color: inherit;
+    }
+}

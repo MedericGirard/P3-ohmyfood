@@ -1,0 +1,15 @@
+.button{
+    background-image: linear-gradient(180deg,$secondary,$primary) ;
+    margin-top: 35px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 50px;
+    width: 225px;
+    border: none;
+    border-radius: 30px;
+    @include shadow;
+    &__text{
+        color: white;
+    }
+}
