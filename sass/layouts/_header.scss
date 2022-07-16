@@ -5,3 +5,15 @@
         width: 165px;
     }
 }
+
+.header_pages{
+    justify-content: center;
+    align-content: center;
+    height: 45px;
+    padding-top: 20px;
+    &__back{
+        font-size: 1.5em;
+        position: absolute;
+        left: 20px;
+    }
+}

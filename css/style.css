@@ -72,21 +72,28 @@ table {
 .button__text {
   color: white;
 }
+.button--pages {
+  width: 185px;
+  margin-top: 45px;
+}
 
 .footer {
   background-color: #353535;
   color: white;
-  margin: 65px 0 0px 0;
   padding: 27px 0 40px 0;
 }
 .footer__title {
   font-family: "Shrikhand", cursive;
   margin: 0 0 0 25px;
   font-size: 1.2em;
+  color: white;
 }
 .footer__link {
   margin-left: 25px;
   margin-top: 13px;
+}
+.footer--pages {
+  margin-top: -50px;
 }
 
 .header {
@@ -95,6 +102,18 @@ table {
 }
 .header__image {
   width: 165px;
+}
+
+.header_pages {
+  justify-content: center;
+  align-content: center;
+  height: 45px;
+  padding-top: 20px;
+}
+.header_pages__back {
+  font-size: 1.5em;
+  position: absolute;
+  left: 20px;
 }
 
 .pub {
@@ -127,9 +146,33 @@ table {
   font-weight: bold;
 }
 
-main {
-  margin-left: 20px;
-  margin-right: 20px;
+.subheader_pages img {
+  height: 270px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.main {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  background-color: #F6F6F6;
+  position: relative;
+  top: -50px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding-bottom: 100px;
+}
+.container__title {
+  font-size: 1.8em;
+  padding-top: 30px;
+}
+.container__title i {
+  position: absolute;
+  right: 30px;
+  font-size: 0.8em;
 }
 
 h1, h2, h3, p, a, span {
@@ -147,7 +190,46 @@ a {
 a:visited {
   color: inherit;
 }
+a:link {
+  color: white;
+}
 
+.menu__part__title {
+  text-transform: uppercase;
+  margin-top: 37px;
+}
+.menu__part__title::after {
+  content: "";
+  display: block;
+  width: 45px;
+  padding-top: 6px;
+  border-bottom: 2px solid #99E2D0;
+}
+.menu__content {
+  margin: 13px -5px 0 -5px;
+  background-color: white;
+  height: 70px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.menu__content__title {
+  font-weight: bold;
+  font-size: 1.1em;
+  padding: 15px 10px 10px 10px;
+}
+.menu__content__subtitle {
+  padding: 0 0 0 10px;
+  font-size: 0.9em;
+}
+.menu__content__price {
+  position: absolute;
+  right: 30px;
+  font-weight: bold;
+}
+
+.section {
+  padding: 0 20px 0 20px;
+}
 .section--fonctionnement {
   padding-bottom: 20px;
 }
@@ -169,12 +251,16 @@ a:visited {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .section .stage__number {
+  height: 15px;
+  width: 15px;
+  justify-content: center;
+  align-items: center;
   color: white;
   margin-left: -10px;
   background-color: #9356DC;
   border: solid 1px #9356DC;
   border-radius: 50%;
-  padding: 5px 8px;
+  padding: 5px;
 }
 .section .stage__icon {
   color: grey;
@@ -183,14 +269,18 @@ a:visited {
   font-weight: bold;
 }
 .section--restaurants {
-  margin-top: 100px;
+  padding-top: 10px;
+  padding-bottom: 65px;
+  margin: 50px 0 0 0;
+  background-color: #F6F6F6;
 }
 .section .restau {
   flex-direction: column;
+  width: 100%;
   margin-bottom: 20px;
   height: 250px;
   object-fit: cover;
-  margin: 20px 0 0 0;
+  margin: 20px 0 0px 0;
   position: relative;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
