@@ -1,12 +1,15 @@
 @import "sass/base/reset";
 @import "sass/utils/variables";
+@import "sass/utils/mixin";
 @import "sass/components/button";
 @import "sass/layouts/footer";
 @import "sass/layouts/header";
 @import "sass/layouts/pub";
 @import "sass/layouts/subheader";
 @import "sass/layouts/main";
-@import "sass/pages/container";
+@import "sass/pages/home";
+@import "sass/pages/restaurants";
 @import "sass/base/style";
 @import "sass/layouts/menu";
-@import "sass/layouts/section"
+@import "sass/layouts/section";
+@import "sass/base/animations";

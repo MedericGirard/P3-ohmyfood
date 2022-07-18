@@ -17,4 +17,11 @@ a{
     &:link{
         color: white;
     }
+
+}
+.fa-gradient {
+	background-image: linear-gradient(60deg,$secondary,$primary);
+	background-clip: text;
+    -webkit-background-clip: text;
+	color: transparent;
 }

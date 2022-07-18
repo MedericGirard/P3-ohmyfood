@@ -1,0 +1,11 @@
+@mixin blue {
+    border: solid 1px blue;
+}
+
+@mixin red {
+    border: solid 1px red;
+}
+
+@mixin shadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
