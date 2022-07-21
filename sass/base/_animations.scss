@@ -1,3 +1,29 @@
-.heart-animated{
-   z-index: 2;
+// Coeur Homepage
+
+// Coeur Pages restaurants
+.pages{
+   font-size: 1.1em;
+   &__heart{
+      &__empty{
+         opacity: 1;
+         position: absolute; 
+         right: 0;
+      }
+      &__full{    
+         transform: scale(0);
+         transition: transform 500ms;
+         position: absolute;
+         right: 0;
+         transform-origin: bottom;
+      }
+   }
+   &:hover{
+      .pages{
+          &__heart{
+              &__full{
+                  transform: scale(1);
+              }
+          }
+      }
+  }
 }

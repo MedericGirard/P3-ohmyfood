@@ -37,6 +37,7 @@
         &__text{
             font-weight: bold;
         }
+        
     }
 
     &--restaurants{
@@ -45,7 +46,6 @@
         margin: 50px 0 0 0 ;
         background-color: $background;
     }
-
     .restau{
         flex-direction: column;
         width: 100%;
@@ -89,6 +89,9 @@
             right: 25px;
             bottom: 25px;
             font-size: 1.5em;
+            &__empty{
+                opacity: 1;
+            }
             &__full{
             position: absolute;
             top: 0;

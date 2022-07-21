@@ -1,5 +1,5 @@
 .button{
-    background-image: linear-gradient(180deg,$secondary,$primary) ;
+    background-image: $background-gradient;
     margin-top: 35px;
     display: block;
     margin-left: auto;
@@ -9,11 +9,15 @@
     border: none;
     border-radius: 30px;
     @include shadow;
-    &__text{
-        color: white;
-    }
+    margin-top: 35px;
+    color: white;
     &--pages{
         width: 185px;
         margin-top: 45px;
+    }
+    &:hover{
+        background-color: lighten(#9356dc, 8%);
+        background-blend-mode: lighten;
+        box-shadow: 4px 4px 6px #000;
     }
 }

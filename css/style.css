@@ -68,13 +68,17 @@ table {
   border: none;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-}
-.button__text {
+  margin-top: 35px;
   color: white;
 }
 .button--pages {
   width: 185px;
   margin-top: 45px;
+}
+.button:hover {
+  background-color: #a978e3;
+  background-blend-mode: lighten;
+  box-shadow: 4px 4px 6px #000;
 }
 
 .footer {
@@ -175,7 +179,7 @@ table {
   font-size: 0.8em;
 }
 
-h1, h2, h3, p, a, span {
+h1, h2, h3, p, a, span, .button {
   font-family: "Roboto", sans-serif;
 }
 
@@ -326,6 +330,9 @@ a:link {
   bottom: 25px;
   font-size: 1.5em;
 }
+.section .restau__heart__empty {
+  opacity: 1;
+}
 .section .restau__heart__full {
   position: absolute;
   top: 0;
@@ -337,8 +344,64 @@ a:link {
   transform: scale(1);
 }
 
-.heart-animated {
-  z-index: 2;
+.pages {
+  font-size: 1.1em;
+}
+.pages__heart__empty {
+  opacity: 1;
+  position: absolute;
+  right: 0;
+}
+.pages__heart__full {
+  transform: scale(0);
+  transition: transform 500ms;
+  position: absolute;
+  right: 0;
+  transform-origin: bottom;
+}
+.pages:hover .pages__heart__full {
+  transform: scale(1);
+}
+
+.loader {
+  background-color: white;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  animation: loader 2s ease-in-out 2s forwards;
+  justify-content: center;
+  align-items: center;
+}
+.loader__spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #9356DC;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  position: fixed;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
