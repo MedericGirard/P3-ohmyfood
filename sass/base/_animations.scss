@@ -1,9 +1,9 @@
-// Coeur Homepage
 
 // Coeur Pages restaurants
 .pages{
    font-size: 1.1em;
    &__heart{
+      position: relative;
       &__empty{
          opacity: 1;
          position: absolute; 

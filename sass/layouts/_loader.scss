@@ -4,11 +4,11 @@
   height: 100%;
   width: 100%;
   z-index: 10;
-  animation: loader 2s ease-in-out 2s forwards;
+  // animation: loader 2s ease-in-out 2s forwards;
   justify-content: center;
   align-items: center;
   &__spinner {
-    border: 16px solid #f3f3f3; 
+    border: 16px solid #f3f3f3;
     border-top: 16px solid $primary; 
     border-radius: 50%;
     width: 120px;
