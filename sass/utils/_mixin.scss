@@ -9,3 +9,15 @@
 @mixin shadow {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
+
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}

@@ -8,11 +8,34 @@
     &__title{
         font-size: 1.8em;
         padding-top: 30px;
-
-        i{
-            position: absolute;
-            right: 30px;
-            font-size: 0.8em;
-        }
     }
 }
+
+.pages{
+    &__heart{
+        position: relative;
+        left: 60px;
+        font-size: 0.9em;
+       &__empty{
+          opacity: 1;
+          position: absolute; 
+          right: 0;
+       }
+       &__full{    
+          transform: scale(0);
+          transition: transform 500ms;
+          position: absolute;
+          right: 0;
+          transform-origin: bottom;
+       }
+    }
+    &:hover{
+       .pages{
+           &__heart{
+               &__full{
+                   transform: scale(1);
+               }
+           }
+       }
+   }
+ }

@@ -53,10 +53,6 @@ table {
   border-spacing: 0;
 }
 
-.flex {
-  display: flex;
-}
-
 .button {
   background-image: linear-gradient(180deg, #FF79DA, #9356DC);
   margin-top: 35px;
@@ -78,7 +74,10 @@ table {
 .button:hover {
   background-color: #a978e3;
   background-blend-mode: lighten;
-  box-shadow: 4px 4px 6px #000;
+  box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transform: translate(-5px, -5px);
+  transition: transform 150ms;
 }
 
 .footer {
@@ -98,6 +97,13 @@ table {
 }
 .footer--pages {
   margin-top: -50px;
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .header {
@@ -156,9 +162,12 @@ table {
   object-fit: cover;
 }
 
-.main {
-  padding-left: 20px;
-  padding-right: 20px;
+@media screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .container {
@@ -173,10 +182,26 @@ table {
   font-size: 1.8em;
   padding-top: 30px;
 }
-.container__title i {
+
+.pages__heart {
+  position: relative;
+  left: 60px;
+  font-size: 0.9em;
+}
+.pages__heart__empty {
+  opacity: 1;
   position: absolute;
-  right: 30px;
-  font-size: 0.8em;
+  right: 0;
+}
+.pages__heart__full {
+  transform: scale(0);
+  transition: transform 500ms;
+  position: absolute;
+  right: 0;
+  transform-origin: bottom;
+}
+.pages:hover .pages__heart__full {
+  transform: scale(1);
 }
 
 h1, h2, h3, p, a, span, .button {
@@ -205,6 +230,10 @@ a:link {
   color: transparent;
 }
 
+.flex {
+  display: flex;
+}
+
 .menu__part__title {
   text-transform: uppercase;
   margin-top: 37px;
@@ -223,6 +252,7 @@ a:link {
   border-radius: 15px;
   position: relative;
   justify-content: space-between;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .menu__content__title {
@@ -233,10 +263,18 @@ a:link {
 .menu__content__subtitle {
   padding: 0 0 0 10px;
   font-size: 0.9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 80%;
 }
 .menu__content__price {
   font-weight: bold;
   padding-right: 20px;
+  padding-left: 10px;
+}
+.menu__content__pop1 {
+  animation: menu_pop 1000ms;
 }
 .menu__content__pop2 {
   animation: menu_pop 1500ms;
@@ -248,19 +286,20 @@ a:link {
   animation: menu_pop 2500ms;
 }
 .menu__content__left {
-  border: solid 1px blue;
+  width: 0;
   flex-grow: 1;
+  transition: flex-grow 500ms;
 }
 .menu__content__right {
-  border: solid 1px red;
   width: 15%;
-  height: 68px;
+  height: 69x;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   justify-content: center;
   align-items: center;
-  display: none;
   background-color: #99E2D0;
+  margin-right: -65px;
+  transition: margin-right 700ms;
 }
 .menu__content__right i {
   color: white;
@@ -270,10 +309,12 @@ a:link {
 .menu__content__inline {
   justify-content: space-between;
 }
+.menu__content:hover .menu__content__left {
+  width: 250px;
+}
 .menu__content:hover .menu__content__right {
-  display: flex;
-  animation: slider 1000ms;
-  transform-origin: right;
+  margin-right: 0px;
+  transition: margin-right 500ms;
 }
 .menu__content:hover .menu__content__right i {
   animation: spin 1000ms;
@@ -281,6 +322,13 @@ a:link {
 
 .section {
   padding: 0 20px 0 20px;
+}
+@media screen and (min-width: 1024px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
 }
 .section--fonctionnement {
   padding-bottom: 20px;
@@ -290,8 +338,22 @@ a:link {
   font-weight: bold;
   margin: 50px 0 0 0;
 }
+@media screen and (min-width: 1024px) {
+  .section__title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
 .section .stage {
   margin-top: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .section .stage {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
 }
 .section .stage__content {
   margin: 30px 0 0 0;
@@ -301,6 +363,21 @@ a:link {
   gap: 30px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+@media screen and (min-width: 1024px) {
+  .section .stage__content {
+    height: 90px;
+    width: 300px;
+  }
+}
+.section .stage__content--1:hover {
+  background-color: #e4d5f6;
+}
+.section .stage__content--2:hover {
+  background-color: #e4d5f6;
+}
+.section .stage__content--3:hover {
+  background-color: #e4d5f6;
 }
 .section .stage__number {
   height: 15px;
@@ -326,6 +403,17 @@ a:link {
   margin: 50px 0 0 0;
   background-color: #F6F6F6;
 }
+@media screen and (min-width: 1024px) {
+  .section--restaurants {
+    gap: 50px;
+    border-radius: 25px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .section .restau {
   flex-direction: column;
   width: 100%;
@@ -336,6 +424,17 @@ a:link {
   position: relative;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+@media screen and (min-width: 1024px) {
+  .section .restau {
+    width: 35%;
+  }
+}
+.section .restau:hover {
+  box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transform: translate(-5px, -5px);
+  transition: transform 150ms;
 }
 .section .restau__image img {
   object-fit: cover;
@@ -383,47 +482,6 @@ a:link {
 }
 .section .restau__heart:hover .restau__heart__full {
   transform: scale(1);
-}
-
-.pages {
-  font-size: 1.1em;
-}
-.pages__heart {
-  position: relative;
-}
-.pages__heart__empty {
-  opacity: 1;
-  position: absolute;
-  right: 0;
-}
-.pages__heart__full {
-  transform: scale(0);
-  transition: transform 500ms;
-  position: absolute;
-  right: 0;
-  transform-origin: bottom;
-}
-.pages:hover .pages__heart__full {
-  transform: scale(1);
-}
-
-.loader {
-  background-color: white;
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  z-index: 10;
-  justify-content: center;
-  align-items: center;
-}
-.loader__spinner {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #9356DC;
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  position: fixed;
 }
 
 @keyframes spin {

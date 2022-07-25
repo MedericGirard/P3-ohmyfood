@@ -15,4 +15,9 @@
     &--pages{
         margin-top: -50px;
     }
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
