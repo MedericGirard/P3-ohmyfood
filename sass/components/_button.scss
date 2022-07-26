@@ -18,9 +18,6 @@
     &:hover{
         background-color: lighten(#9356dc, 8%);
         background-blend-mode: lighten;
-        box-shadow: 1rem 1rem 20px rgb(0 0 0 / 25%);
-        cursor: pointer;
-        transform: translate(-5px, -5px);
-        transition: transform 150ms;
+        @include relief;
     }
 }
