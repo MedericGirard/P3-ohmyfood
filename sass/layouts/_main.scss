@@ -10,4 +10,9 @@ main{
         flex-direction: column;
         align-items: center;
     }
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }

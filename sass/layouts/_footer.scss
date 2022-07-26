@@ -15,7 +15,7 @@
     &--pages{
         margin-top: -50px;
     }
-    @include desktop{
+    @include tablet{
         display: flex;
         flex-direction: column;
         align-items: center;
