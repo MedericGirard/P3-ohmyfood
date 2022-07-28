@@ -11,11 +11,12 @@ h1,h2,h3,p,a,span,.button {
 a{
     outline: none;
     text-decoration: none;
+    color: black;
     &:visited{
         color: inherit;
     }
     &:link{
-         color: black;
+        color: black;
     }
 }
 
