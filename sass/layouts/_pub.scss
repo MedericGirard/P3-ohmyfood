@@ -1,16 +1,19 @@
-.pub{
+.pub {
     background-color: $background;
     padding-bottom: 60px;
     padding-top: 42px;
-    &__text{
+
+    &__text {
         text-align: center;
     }
-    &__title{
+
+    &__title {
         margin: 0 50px 20px 45px;
         font-weight: bolder;
         font-size: 1.5em;
     }
-    &__subtitle{
+
+    &__subtitle {
         margin: 0 20px 0 20px;
         font-size: 1.1em;
     }

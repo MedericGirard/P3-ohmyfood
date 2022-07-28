@@ -1,20 +1,17 @@
-.subheader{
+.subheader {
     background-color: #EAEAEA;
-    // display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     height: 50px;
     box-shadow: inset 0px 10px 10px -10px rgba(0, 0, 0, 0.445);
-    &__icon{
 
-    }
-    &__text{
+    &__text {
         font-weight: bold;
     }
 }
 
-.subheader_pages img{
+.subheader_pages img {
     height: 270px;
     width: 100%;
     object-fit: cover;

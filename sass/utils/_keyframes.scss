@@ -1,33 +1,41 @@
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
   }
 
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 @keyframes loader {
-   from {
-     opacity: 1;
-   }
-   to {
+  from {
+    opacity: 1;
+  }
+
+  to {
     opacity: 0;
     z-index: -1;
-   }
- }
+  }
+}
 
- @keyframes menu_pop {
+@keyframes menu_pop {
   from {
     opacity: 0;
     transform: translateY(15px);
   }
+
   to {
     opacity: 1;
   }
- }
+}
 
- @keyframes slider {
+@keyframes slider {
   from {
     transform: scaleX(0);
   }
+
   to {
     transform: scaleX(1);
   }
- }
+}

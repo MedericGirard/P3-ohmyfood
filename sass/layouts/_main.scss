@@ -1,16 +1,11 @@
-body{
-    // background-image: url(/images/Accueil_transp.png) ;
-    // background-image: url(/images/Menu\ -\ À\ la\ française_transp.png);
-    
-}
-
-main{
-    @include desktop{
+main {
+    @include desktop {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    @include tablet{
+
+    @include tablet {
         display: flex;
         flex-direction: column;
         align-items: center;

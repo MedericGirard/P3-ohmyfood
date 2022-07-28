@@ -1,44 +1,54 @@
-.section{
+.section {
     padding: 0 20px 0 20px;
-    @include desktop{
+
+    @include desktop {
         display: flex;
         flex-direction: column;
         width: 90%;
     }
-    @include tablet{
+
+    @include tablet {
         display: flex;
         flex-direction: column;
         width: 90%;
         border-radius: 25px;
     }
-    &--fonctionnement{
+
+    &--fonctionnement {
         padding-bottom: 20px;
-        @include tablet{
+
+        @include tablet {
             display: flex;
             flex-direction: column;
             width: 500px;
         }
-        @include desktop{
+
+        @include desktop {
             width: 90%;
         }
     }
-    &__title{
+
+    &__title {
         font-size: 1.5em;
         font-weight: bold;
         margin: 50px 0 0 0;
-        @include tablet{
+
+        @include tablet {
             display: flex;
             justify-content: center;
             width: 100%;
         }
     }
-    .stage{
+
+    .stage {
         margin-top: 30px;
-        @include desktop{
+
+        @include desktop {
             display: flex;
             gap: 100px;
         }
-        &__content{
+
+        &__content {
             margin: 30px 0 0 0;
             background-color: $background;
             height: 70px;
@@ -46,16 +56,21 @@
             gap: 30px;
             border-radius: 20px;
             @include shadow;
-            @include desktop{
+
+            @include desktop {
                 height: 90px;
                 width: 100%;
             }
-            &--1:hover, &--2:hover, &--3:hover{
+
+            &--1:hover,
+            &--2:hover,
+            &--3:hover {
                 background-color: lighten($color: $primary, $amount: 30);
-                 @include relief;
+                @include relief;
             }
         }
-        &__number{
+
+        &__number {
             height: 15px;
             width: 15px;
             justify-content: center;
@@ -67,21 +82,24 @@
             border-radius: 50%;
             padding: 5px;
         }
-        &__icon{
+
+        &__icon {
             color: grey;
         }
-        &__text{
+
+        &__text {
             font-weight: bold;
         }
-        
+
     }
 
-    &--restaurants{
+    &--restaurants {
         padding-top: 10px;
         padding-bottom: 65px;
-        margin: 50px 0 0 0 ;
+        margin: 50px 0 0 0;
         background-color: $background;
-        @include desktop{
+
+        @include desktop {
             gap: 50px;
             border-radius: 25px;
             margin-bottom: 50px;
@@ -91,32 +109,37 @@
             justify-content: center;
         }
     }
-    .restau{
+
+    .restau {
         flex-direction: column;
         width: 100%;
-        margin-bottom: 20px;
         height: 250px;
         object-fit: cover;
-        margin: 20px 0 0px 0;
+        margin: 20px 0 0 0;
         position: relative;
         border-radius: 15px;
         @include shadow;
-        @include desktop{
+
+        @include desktop {
             width: 35%;
         }
-        &:hover{
+
+        &:hover {
             @include relief;
         }
-        &__image img{
+
+        &__image img {
             object-fit: cover;
             height: 175px;
             width: 100%;
             border-radius: 15px 15px 0 0;
         }
-        &__content{
+
+        &__content {
             margin: 20px 10px 0 10px;
         }
-        &__new{
+
+        &__new {
             position: absolute;
             top: 20px;
             right: 20px;
@@ -127,33 +150,39 @@
             color: #008766;
             font-weight: bold;
         }
-        &__title{
+
+        &__title {
             font-weight: bold;
-            font-size: 1.2em; 
+            font-size: 1.2em;
         }
-        &__text{
+
+        &__text {
             margin: 5px 0 0 0;
             font-size: 1.1em;
         }
-        &__heart{
+
+        &__heart {
             position: absolute;
             right: 25px;
             bottom: 25px;
             font-size: 1.5em;
-            &__empty{
+
+            &__empty {
                 opacity: 1;
             }
-            &__full{
-            position: absolute;
-            top: 0;
-            transform: scale(0);
-            transition: transform 500ms;
-            transform-origin: bottom;
+
+            &__full {
+                position: absolute;
+                top: 0;
+                transform: scale(0);
+                transition: transform 500ms;
+                transform-origin: bottom;
             }
-            &:hover{
-                .restau{
-                    &__heart{
-                        &__full{
+
+            &:hover {
+                .restau {
+                    &__heart {
+                        &__full {
                             transform: scale(1);
                         }
                     }
@@ -162,4 +191,3 @@
         }
     }
 }
-
