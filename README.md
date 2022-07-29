@@ -35,8 +35,6 @@ Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/
 
 **Autorisés:** HTML / CSS / Sass
 
-**Recommandée:** HTML / Sass
-
 **Interdit:** Javascript / Frameworks CSS / Inline CSS
 
 ## Notes
@@ -51,12 +49,9 @@ Vous pouvez retrouver le [brief complet ici](https://s3-eu-west-1.amazonaws.com/
 - Tertiaire: #99E2D0
 
 **Contraintes :**
-- Approche mobile-first: oui
-- Maquette mobile : oui
-- Maquette desktop : à improviser
-- Validation W3C HTML : à passer, warning autorisés
-- Validation W3C CSS : à passer, warning autorisés
-- Compatibilité : Dernières versions de Chrome, Firefox & Safari
+- Développement mobile-first
+- Validation W3C HTML
+- Validation W3C CSS
 
 **Tester le projet :**
 Démo en ligne : https://medericgirard.github.io/P3-ohmyfood/
