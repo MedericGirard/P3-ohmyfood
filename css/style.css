@@ -87,7 +87,7 @@ table {
     transform: scaleX(1);
   }
 }
-h1, h2, h3, p, a, span, .button {
+h1, h2, h3, p, a, span, .button, .stage__number {
   font-family: "Roboto", sans-serif;
 }
 
@@ -141,7 +141,7 @@ a:link {
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transform: translate(-5px, -5px);
-  transition: transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
 }
 
 .footer {
@@ -341,7 +341,7 @@ a:link {
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transform: translate(-5px, -5px);
-  transition: transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
 }
 .menu__content:hover .menu__content__left {
   width: 250px;
@@ -351,7 +351,7 @@ a:link {
   transition: margin-right 500ms;
 }
 .menu__content:hover .menu__content__right i {
-  animation: spin 1000ms;
+  animation: spin 500ms;
 }
 
 .container {
@@ -465,11 +465,11 @@ a:link {
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transform: translate(-5px, -5px);
-  transition: transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
 }
 .section .stage__number {
-  height: 15px;
-  width: 15px;
+  height: 27px;
+  width: 27px;
   justify-content: center;
   align-items: center;
   color: white;
@@ -477,7 +477,6 @@ a:link {
   background-color: #9356DC;
   border: solid 1px #9356DC;
   border-radius: 50%;
-  padding: 5px;
 }
 .section .stage__icon {
   color: grey;
@@ -521,7 +520,7 @@ a:link {
   box-shadow: 1rem 1rem 20px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transform: translate(-5px, -5px);
-  transition: transform 150ms;
+  transition: transform 150ms, box-shadow 150ms;
 }
 .section .restau__image img {
   object-fit: cover;
