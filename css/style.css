@@ -338,6 +338,11 @@ a:link {
 .menu__content:hover .menu__content__left {
   width: 250px;
 }
+@media screen and (min-width: 768px) {
+  .menu__content:hover .menu__content__left {
+    width: 150px;
+  }
+}
 .menu__content:hover .menu__content__right {
   margin-right: 0px;
   transition: margin-right 500ms;

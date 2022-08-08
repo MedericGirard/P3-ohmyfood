@@ -37,6 +37,7 @@
             width: 100%;
         }
 
+
         &__title {
             font-weight: bold;
             font-size: 1.1em;
@@ -112,6 +113,9 @@
                 &__content {
                     &__left {
                         width: 250px;
+                        @include tablet{
+                            width: 150px;
+                        }
                     }
 
                     &__right {
